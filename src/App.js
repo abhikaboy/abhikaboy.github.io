@@ -1,6 +1,7 @@
 import './App.css';
 import React, {Component} from 'react';
-import Navigation from "./Components/Navigation";
+import {Navigation} from "./Components/Navigation";
+import {Header} from "./Components/Header";
 class App extends Component{
     constructor(props){
       super();
@@ -12,8 +13,8 @@ class App extends Component{
   render(){
     return(
       <div>
+        {/* <Header /> */}
         <Navigation />
-        <p>hahah</p>
       </div>
     );
   }
