@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { AnimationWrapper } from "react-hover-animation";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-export class ProjectEntry extends Component {
+export class ProjectEntryAlt extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -35,21 +34,10 @@ export class ProjectEntry extends Component {
 				</svg>
 				<Col md={2}></Col>
 				<Col>
-					<Image
-						src={this.props.img}
-						style={{
-							width: "70%",
-							margin: "5%",
-							zIndex: "90",
-						}}
-					/>
-				</Col>
-				<Col>
 					<h2
 						style={{
 							color: "#34febb",
-							textAlign: "right",
-
+							textAlign: "left",
 							paddingTop: "20%",
 						}}>
 						{this.props.name}
@@ -57,24 +45,25 @@ export class ProjectEntry extends Component {
 					<p
 						style={{
 							color: "white",
-							textAlign: "right",
+							textAlign: "left",
 						}}>
 						{this.props.description}
 					</p>
 				</Col>
-				<Col></Col>
+				<Col>
+					<Image
+						src={this.props.img}
+						style={{
+							width: "100%",
+							margin: "5%",
+							zIndex: "90",
+						}}
+					/>
+				</Col>
+				<Col md={2}></Col>
 			</Row>
 		);
 	}
 }
-const headerStyle = {
-	textAlign: "center",
-	padding: "2%",
-	color: "white",
-};
-const title = {
-	color: "#34febb",
-	marginTop: "5%",
-	paddingLeft: "20%",
-};
-export default ProjectEntry;
+
+export default ProjectEntryAlt;

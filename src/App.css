@@ -5,4 +5,25 @@
 /* Hide scrollbar for IE and Edge */
 html {
 	-ms-overflow-style: none;
+	background-color: black;
+}
+.custom-shape-divider-top-1610350102 {
+	position: relative;
+	top: 0%;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.custom-shape-divider-top-1610350102 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 160px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1610350102 .shape-fill {
+	fill: #171e27;
 }

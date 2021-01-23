@@ -1,34 +1,51 @@
 import React, { Component } from 'react'
-
+import Image from 'react-bootstrap/Image';
 export class Header extends Component {
     render() {
         return (
-            <div style = {headerStyle}>
-                {/* <div style = {bg}></div> */}
-                {/* <h1 style = {title}> Baablu Bussiness</h1> */}
+            <div >
+                <h3 style = {preText}>Hi, I'm</h3>
+                <h1 style = {title}>Abhik Ray</h1>
+                <p></p>
+                <Image style = {headerStyle} src = {"https://images8.alphacoders.com/105/1059699.png"}></Image>
             </div>
         )
     }
 }
 const headerStyle = {
-    position:"sticky",
+    width:"100%",
+    height: "100vh",
+    //background:"rgb(41,40,65)"
+    background: "rgb(0,0,0)",
+    filter:"blur(30px) brightness(20%)",
+    overflow: "hidden",
+    transform: "scale(1.1)"
 
 }
-const bg = {
-    background: 'url("https://wallpaperaccess.com/full/426901.jpg") bottom right',
-    filter:' blur(15px) brightness(80%)',
-    webkitfilter: 'blur(8px)',
-    padding:'5%',
-    
-}
 const title = {
-    textAlign: 'center',  
-    position: 'absolute',
-    top:"30%",
-    left:"40%", 
+    textAlign:"center",
+    width:"100%",
+    marginTop:"20%",
     color:"white",
-    fontSize:"3em",
-    backdropFilter:"brightness(70%)",
-    padding:"1%"
+    fontSize:"5em",
+    //background:"linear-gradient(rgba(20,25,33,0.8), rgba(20,25,33,0.8))",
+    position:"absolute",
+    zIndex:"2",
+    //backdropFilter: "brightness(5%)"
+}
+const preText = {
+    position:"absolute",
+    color:"white",
+    backgroundColor: "#f3ec78",
+    backgroundImage: "linear-gradient(25deg, #34febb, #88b4e7)",
+    backgroundSize: "100%",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    zIndex:"2",
+    marginTop:"20%",
+    transform: "translate(0%,-100%)",
+    width:"100%",
+    textAlign: "center",
+
 }
 export default Header
