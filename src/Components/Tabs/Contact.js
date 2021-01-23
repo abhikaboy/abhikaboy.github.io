@@ -9,11 +9,13 @@ export class Contact extends Component {
 	render() {
 		return (
 			<div>
-				<h2 style={title}>Contact</h2>
+				<ScrollAnimation animateIn='fadeInDown' delay={0}>
+					<h2 style={title}>Contact</h2>
+				</ScrollAnimation>
 				<Container>
 					<Row>
 						<Col>
-							<ScrollAnimation animateIn='rotateIn'>
+							<ScrollAnimation animateIn='rotateIn' delay={250}>
 								<Image
 									style={image}
 									src={"https://i.imgur.com/ZOKp8LH.jpg"}
@@ -21,7 +23,7 @@ export class Contact extends Component {
 							</ScrollAnimation>
 						</Col>
 						<Col>
-							<ScrollAnimation animateIn='rotateIn' delay={250}>
+							<ScrollAnimation animateIn='rotateIn' delay={500}>
 								<Image
 									style={image}
 									src={
@@ -32,7 +34,7 @@ export class Contact extends Component {
 						</Col>
 						<Col>
 							<div style={{ paddingBottom: "15%" }}></div>
-							<ScrollAnimation animateIn='rotateIn' delay={500}>
+							<ScrollAnimation animateIn='rotateIn' delay={750}>
 								<Image
 									style={image}
 									src={
@@ -44,17 +46,17 @@ export class Contact extends Component {
 					</Row>
 					<Row style={contactText}>
 						<Col>
-							<ScrollAnimation animateIn='fadeInUp' delay={1000}>
+							<ScrollAnimation animateIn='fadeInUp' delay={1250}>
 								<h4>Suntex#0101</h4>
 							</ScrollAnimation>
 						</Col>
 						<Col>
-							<ScrollAnimation animateIn='fadeInUp' delay={1250}>
+							<ScrollAnimation animateIn='fadeInUp' delay={1500}>
 								<h4>abhikaboy</h4>
 							</ScrollAnimation>
 						</Col>
 						<Col>
-							<ScrollAnimation animateIn='fadeInUp' delay={1500}>
+							<ScrollAnimation animateIn='fadeInUp' delay={1750}>
 								<h4>abhikaboy@gmail.com</h4>
 							</ScrollAnimation>
 						</Col>
