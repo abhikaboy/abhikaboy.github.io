@@ -39,7 +39,7 @@ export class ProjectEntry extends Component {
 					<Container
 						fluid
 						style={{
-							border: "5px solid",
+							border: "0px solid",
 							borderRadius: "20px",
 							borderColor: "white",
 							width: "100%",
