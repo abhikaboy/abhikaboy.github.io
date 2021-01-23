@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { AnimationWrapper } from "react-hover-animation";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 export class ProjectEntry extends Component {
 	constructor(props) {
@@ -11,7 +12,7 @@ export class ProjectEntry extends Component {
 	render() {
 		return (
 			<Row>
-				<svg
+				{/* <svg
 					width='100%'
 					height='50%'
 					style={{
@@ -32,49 +33,70 @@ export class ProjectEntry extends Component {
 							position: "absolute",
 							zIndex: "0",
 						}}></line>
-				</svg>
+				</svg> */}
 				<Col md={2}></Col>
-				<Col>
-					<Image
-						src={this.props.img}
+				<Col md={7}>
+					<Container
+						fluid
 						style={{
-							width: "70%",
-							margin: "5%",
-							zIndex: "90",
-						}}
-					/>
-				</Col>
-				<Col>
-					<h2
-						style={{
-							color: "#34febb",
-							textAlign: "right",
+							border: "5px solid",
+							borderRadius: "20px",
+							borderColor: "white",
+							width: "100%",
+							padding: "3%",
+						}}>
+						<Row>
+							<Col>
+								<Image
+									src={this.props.img}
+									style={{
+										width: "75%",
+										margin: "5%",
+										zIndex: "90",
+									}}
+								/>
+							</Col>
+							<Col>
+								<h2
+									style={{
+										color: "#34febb",
+										textAlign: "right",
 
-							paddingTop: "20%",
-						}}>
-						{this.props.name}
-					</h2>
-					<p
-						style={{
-							color: "white",
-							textAlign: "right",
-						}}>
-						{this.props.description}
-					</p>
+										paddingTop: "20%",
+									}}>
+									{this.props.name}
+								</h2>
+								<p
+									style={{
+										color: "white",
+										textAlign: "right",
+									}}>
+									{this.props.description}
+								</p>
+								<Button
+									style={githubButton}
+									variant='outline-info'
+									target='_blank'
+									href={this.props.ghub}>
+									Github
+								</Button>
+							</Col>
+						</Row>
+					</Container>
 				</Col>
+
 				<Col></Col>
 			</Row>
 		);
 	}
 }
-const headerStyle = {
-	textAlign: "center",
-	padding: "2%",
+
+const githubButton = {
+	zIndex: "2",
+	position: "absolute",
 	color: "white",
-};
-const title = {
-	color: "#34febb",
-	marginTop: "5%",
-	paddingLeft: "20%",
+	textAlign: "right",
+	marginLeft: "100%",
+	transform: "translate(-150%,0)",
 };
 export default ProjectEntry;

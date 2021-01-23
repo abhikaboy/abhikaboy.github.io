@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 export class ProjectEntryAlt extends Component {
 	constructor(props) {
 		super(props);
@@ -10,7 +12,7 @@ export class ProjectEntryAlt extends Component {
 	render() {
 		return (
 			<Row>
-				<svg
+				{/* <svg
 					width='100%'
 					height='50%'
 					style={{
@@ -31,39 +33,65 @@ export class ProjectEntryAlt extends Component {
 							position: "absolute",
 							zIndex: "0",
 						}}></line>
-				</svg>
+				</svg> */}
 				<Col md={2}></Col>
-				<Col>
-					<h2
+				<Col md={7}>
+					<Container
+						fluid
 						style={{
-							color: "#34febb",
-							textAlign: "left",
-							paddingTop: "20%",
-						}}>
-						{this.props.name}
-					</h2>
-					<p
-						style={{
-							color: "white",
-							textAlign: "left",
-						}}>
-						{this.props.description}
-					</p>
-				</Col>
-				<Col>
-					<Image
-						src={this.props.img}
-						style={{
+							border: "5px solid",
+							borderRadius: "20px",
+							borderColor: "white",
 							width: "100%",
-							margin: "5%",
-							zIndex: "90",
-						}}
-					/>
+							padding: "3%",
+						}}>
+						<Row>
+							<Col>
+								<h2
+									style={{
+										color: "#34febb",
+										textAlign: "left",
+										paddingTop: "20%",
+									}}>
+									{this.props.name}
+								</h2>
+								<p
+									style={{
+										color: "white",
+										textAlign: "left",
+									}}>
+									{this.props.description}
+								</p>
+								<Button
+									style={githubButton}
+									variant='outline-info'
+									target='_blank'
+									href={this.props.ghub}>
+									Github
+								</Button>
+							</Col>
+							<Col>
+								<Image
+									src={this.props.img}
+									style={{
+										width: "100%",
+										margin: "5%",
+										zIndex: "90",
+									}}
+								/>
+							</Col>
+						</Row>
+					</Container>
 				</Col>
-				<Col md={2}></Col>
+				<Col></Col>
 			</Row>
 		);
 	}
 }
-
+const githubButton = {
+	zIndex: "2",
+	position: "absolute",
+	color: "white",
+	textAlign: "right",
+};
 export default ProjectEntryAlt;
