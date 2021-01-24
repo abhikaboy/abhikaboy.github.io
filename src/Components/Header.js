@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 export class Header extends Component {
 	render() {
 		return (
-			<div>
+			<div style={{ overflow: "hidden" }}>
 				<h3 style={preText}>Hi, I'm</h3>
 				<h1 style={title}>Abhik Ray</h1>
 				<Button
@@ -30,11 +30,11 @@ const githubButton = {
 	color: "white",
 	textAlign: "center",
 	marginLeft: "50%",
-	marginTop: "26%",
+	top: "49%",
 	transform: "translate(-50%,0)",
 };
 const headerStyle = {
-	width: "100%",
+	width: "100vw",
 	height: "100vh",
 	//background:"rgb(41,40,65)"
 	background: "rgb(0,0,0)",
@@ -45,7 +45,7 @@ const headerStyle = {
 const title = {
 	textAlign: "center",
 	width: "100%",
-	marginTop: "20%",
+	top: "37%",
 	color: "white",
 	fontSize: "5em",
 	//background:"linear-gradient(rgba(20,25,33,0.8), rgba(20,25,33,0.8))",
@@ -62,7 +62,7 @@ const preText = {
 	WebkitBackgroundClip: "text",
 	WebkitTextFillColor: "transparent",
 	zIndex: "2",
-	marginTop: "20%",
+	top: "37%",
 	transform: "translate(0%,-100%)",
 	width: "100%",
 	textAlign: "center",
