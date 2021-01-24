@@ -34,8 +34,8 @@ export class ProjectEntry extends Component {
 							zIndex: "0",
 						}}></line>
 				</svg> */}
-				<Col md={2}></Col>
-				<Col md={7}>
+				<Col md={2} sm></Col>
+				<Col md={7} sm>
 					<Container
 						fluid
 						style={{
@@ -46,7 +46,7 @@ export class ProjectEntry extends Component {
 							padding: "3%",
 						}}>
 						<Row>
-							<Col>
+							<Col sm>
 								<Image
 									src={this.props.img}
 									style={{
@@ -56,7 +56,7 @@ export class ProjectEntry extends Component {
 									}}
 								/>
 							</Col>
-							<Col>
+							<Col sm>
 								<h2
 									style={{
 										color: "#34febb",
@@ -85,7 +85,7 @@ export class ProjectEntry extends Component {
 					</Container>
 				</Col>
 
-				<Col></Col>
+				<Col sm></Col>
 			</Row>
 		);
 	}

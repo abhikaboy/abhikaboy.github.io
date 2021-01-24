@@ -23,13 +23,13 @@ export class Projects extends Component {
 						</div>
 					</Row>
 					<Row>
-						<Col md={1}></Col>
-						<Col md={11}>
+						<Col md={1} sm></Col>
+						<Col md={11} sm>
 							<Container fluid>
 								<Row style={{ paddingBottom: "5%" }}>
 									<h2 style={title}>Projects</h2>
 								</Row>
-								<Row style={{ marginBottom: "4%" }}>
+								<Row style={{ marginBottom: "10vh" }}>
 									<ProjectEntry
 										img={
 											"https://cdn.discordapp.com/attachments/799491152789110806/800151716934189106/echidna_icon.png"
@@ -46,7 +46,7 @@ export class Projects extends Component {
 										ghub='https://github.com/abhikaboy/echidna-bot'
 									/>
 								</Row>
-								<Row style={{ marginBottom: "4%" }}>
+								<Row style={{ marginBottom: "10vh" }}>
 									<ProjectEntryAlt
 										img={
 											"https://cdn.discordapp.com/attachments/760776202121117706/800819384020631602/brawlhouse.png"
@@ -64,7 +64,7 @@ export class Projects extends Component {
 										ghub='https://github.com/abhikaboy/brawl-hosue'
 									/>
 								</Row>
-								<Row style={{ marginBottom: "4%" }}>
+								<Row style={{ marginBottom: "10vh" }}>
 									<ProjectEntry
 										img={
 											"https://cdn.discordapp.com/attachments/760776202121117706/800847721556344832/nemesis.png"
@@ -89,7 +89,7 @@ export class Projects extends Component {
 									/>
 								</Row>
 
-								<Row style={{ marginBottom: "4%" }}>
+								<Row style={{ marginBottom: "10vh" }}>
 									<ProjectEntryAlt
 										img={
 											"https://cdn0.iconfinder.com/data/icons/food-set-4/64/Artboard_12_copy-512.png"

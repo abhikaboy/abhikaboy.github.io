@@ -14,7 +14,7 @@ export class Contact extends Component {
 				</ScrollAnimation>
 				<Container>
 					<Row>
-						<Col>
+						<Col sm>
 							<ScrollAnimation animateIn='rotateIn' delay={250}>
 								<Image
 									style={image}
@@ -22,7 +22,7 @@ export class Contact extends Component {
 								/>
 							</ScrollAnimation>
 						</Col>
-						<Col>
+						<Col sm>
 							<ScrollAnimation animateIn='rotateIn' delay={500}>
 								<Image
 									style={image}
@@ -32,7 +32,8 @@ export class Contact extends Component {
 								/>
 							</ScrollAnimation>
 						</Col>
-						<Col>
+						<Col sm>
+							{" "}
 							<div style={{ paddingBottom: "15%" }}></div>
 							<ScrollAnimation animateIn='rotateIn' delay={750}>
 								<Image
@@ -45,17 +46,17 @@ export class Contact extends Component {
 						</Col>
 					</Row>
 					<Row style={contactText}>
-						<Col>
+						<Col sm>
 							<ScrollAnimation animateIn='fadeInUp' delay={1250}>
 								<h4>Suntex#0101</h4>
 							</ScrollAnimation>
 						</Col>
-						<Col>
+						<Col sm>
 							<ScrollAnimation animateIn='fadeInUp' delay={1500}>
 								<h4>abhikaboy</h4>
 							</ScrollAnimation>
 						</Col>
-						<Col>
+						<Col sm>
 							<ScrollAnimation animateIn='fadeInUp' delay={1750}>
 								<h4>abhikaboy@gmail.com</h4>
 							</ScrollAnimation>
