@@ -43,7 +43,8 @@ export class ProjectEntryAlt extends Component {
 							borderRadius: "20px",
 							borderColor: "white",
 							width: "100%",
-							padding: "3%",
+							padding: "5%",
+							paddingBottom: "12%",
 						}}>
 						<Row>
 							<Col sm>

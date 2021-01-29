@@ -7,6 +7,13 @@ html {
 	-ms-overflow-style: none;
 	background-color: black;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  }
 .custom-shape-divider-top-1610350102 {
 	position: relative;
 	top: 0%;
