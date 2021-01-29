@@ -4,6 +4,8 @@ import { ProjectEntryAlt } from "./ProjectEntryAlt";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ScrollAnimation from "react-animate-on-scroll";
+
 export class Projects extends Component {
 	render() {
 		return (
@@ -27,85 +29,106 @@ export class Projects extends Component {
 						<Col md={11} sm>
 							<Container fluid>
 								<Row style={{ paddingBottom: "5%" }}>
-									<h2 style={title}>Projects</h2>
+									<ScrollAnimation
+										animateIn='fadeInDown'
+										delay={0}
+										style={title}>
+										<h2>Projects</h2>
+									</ScrollAnimation>
 								</Row>
 								<Row style={{ marginBottom: "10vh" }}>
-									<ProjectEntry
-										img={
-											"https://cdn.discordapp.com/attachments/799491152789110806/800151716934189106/echidna_icon.png"
-										}
-										description={
-											"Echidna is a discord bot that allows users to play minigames within discord like Connect 4 and schedule server wide events." +
-											" Echidna was utilized during online school to send schedule updates and tell kids when the next class starts or ends."
-										}
-										name={"Echidna"}
-										x1='0'
-										y1='0'
-										x2='100%'
-										y2='75%'
-										ghub='https://github.com/abhikaboy/echidna-bot'
-									/>
+									<ScrollAnimation
+										animateIn='fadeInRight'
+										delay={200}>
+										<ProjectEntry
+											img={
+												"https://cdn.discordapp.com/attachments/799491152789110806/800151716934189106/echidna_icon.png"
+											}
+											description={
+												"Echidna is a discord bot that allows users to play minigames within discord like Connect 4 and schedule server wide events." +
+												" Echidna was utilized during online school to send schedule updates and tell kids when the next class starts or ends."
+											}
+											name={"Echidna"}
+											x1='0'
+											y1='0'
+											x2='100%'
+											y2='75%'
+											ghub='https://github.com/abhikaboy/echidna-bot'
+										/>
+									</ScrollAnimation>
 								</Row>
 								<Row style={{ marginBottom: "10vh" }}>
-									<ProjectEntryAlt
-										img={
-											"https://cdn.discordapp.com/attachments/760776202121117706/800819384020631602/brawlhouse.png"
-										}
-										description={
-											"Brawl house is a Super Smash Bros inspired 2d platformer fighting game. You can choose from a selection of " +
-											"characters wiith unique abilities to fight in real time using Node.js and Sockets.io. This game was made in p5.js and" +
-											" HTML + CSS"
-										}
-										name={"Brawl House"}
-										x1='100%'
-										y1='25%'
-										x2='0%'
-										y2='100%'
-										ghub='https://github.com/abhikaboy/brawl-hosue'
-									/>
+									<ScrollAnimation
+										animateIn='fadeInLeft'
+										delay={400}>
+										<ProjectEntryAlt
+											img={
+												"https://cdn.discordapp.com/attachments/760776202121117706/800819384020631602/brawlhouse.png"
+											}
+											description={
+												"Brawl house is a Super Smash Bros inspired 2d platformer fighting game. You can choose from a selection of " +
+												"characters wiith unique abilities to fight in real time using Node.js and Sockets.io. This game was made in p5.js and" +
+												" HTML + CSS"
+											}
+											name={"Brawl House"}
+											x1='100%'
+											y1='25%'
+											x2='0%'
+											y2='100%'
+											ghub='https://github.com/abhikaboy/brawl-hosue'
+										/>
+									</ScrollAnimation>
 								</Row>
 								<Row style={{ marginBottom: "10vh" }}>
-									<ProjectEntry
-										img={
-											"https://cdn.discordapp.com/attachments/760776202121117706/800847721556344832/nemesis.png"
-										}
-										description={
-											"This is a PWA that I developed with my FRC" +
-											" robotics team to help out in competitions. " +
-											" Scouting is a the main way to gather intel about " +
-											" other robots present at competitions and to help " +
-											" us pick out alliance. This App provides a way " +
-											" for our team to electronically gather this " +
-											" information and manage and analyze this. This " +
-											" app works completely offline and online to adapt " +
-											" to different competition settings. "
-										}
-										name={"FRC Scouting"}
-										// x1='100%'
-										// y1='25%'
-										// x2='0%'
-										// y2='110%'
-										ghub='https://github.com/abhikaboy/MasterScout'
-									/>
+									<ScrollAnimation
+										animateIn='fadeInRight'
+										delay={400}>
+										<ProjectEntry
+											img={
+												"https://cdn.discordapp.com/attachments/760776202121117706/800847721556344832/nemesis.png"
+											}
+											description={
+												"This is a PWA that I developed with my FRC" +
+												" robotics team to help out in competitions. " +
+												" Scouting is a the main way to gather intel about " +
+												" other robots present at competitions and to help " +
+												" us pick out alliance. This App provides a way " +
+												" for our team to electronically gather this " +
+												" information and manage and analyze this. This " +
+												" app works completely offline and online to adapt " +
+												" to different competition settings. "
+											}
+											name={"FRC Scouting"}
+											// x1='100%'
+											// y1='25%'
+											// x2='0%'
+											// y2='110%'
+											ghub='https://github.com/abhikaboy/MasterScout'
+										/>
+									</ScrollAnimation>
 								</Row>
 
 								<Row style={{ marginBottom: "10vh" }}>
-									<ProjectEntryAlt
-										img={
-											"https://cdn0.iconfinder.com/data/icons/food-set-4/64/Artboard_12_copy-512.png"
-										}
-										description={
-											"This was a simple web app that would give users a better shopping experience " +
-											"This was integrated with a back end and would update data from the front end" +
-											"Made with React.js, Node.js and Redux"
-										}
-										name={"Grocery Ecommerce"}
-										x1='0%'
-										y1='0%'
-										x2='100%'
-										y2='50%'
-										ghub='https://github.com/abhikaboy/groceries-ecommerce'
-									/>
+									<ScrollAnimation
+										animateIn='fadeInLeft'
+										delay={400}>
+										<ProjectEntryAlt
+											img={
+												"https://cdn0.iconfinder.com/data/icons/food-set-4/64/Artboard_12_copy-512.png"
+											}
+											description={
+												"This was a simple web app that would give users a better shopping experience " +
+												"This was integrated with a back end and would update data from the front end" +
+												"Made with React.js, Node.js and Redux"
+											}
+											name={"Grocery Ecommerce"}
+											x1='0%'
+											y1='0%'
+											x2='100%'
+											y2='50%'
+											ghub='https://github.com/abhikaboy/groceries-ecommerce'
+										/>
+									</ScrollAnimation>
 								</Row>
 							</Container>
 						</Col>
@@ -114,7 +137,7 @@ export class Projects extends Component {
 				<Row>
 					<div
 						class='custom-shape-divider-top-1610350102'
-						style={{ transform: "scaleY(-1)" }}>
+						style={{ transform: "scaleY(-1)", overflow: "hidden" }}>
 						<svg
 							data-name='Layer 1'
 							xmlns='http://www.w3.org/2000/svg'

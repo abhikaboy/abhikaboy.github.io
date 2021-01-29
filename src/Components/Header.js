@@ -1,19 +1,40 @@
 import React, { Component } from "react";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+import ScrollAnimation from "react-animate-on-scroll";
 export class Header extends Component {
 	render() {
 		return (
 			<div style={{ overflow: "hidden" }}>
-				<h3 style={preText}>Hi, I'm</h3>
-				<h1 style={title}>Abhik Ray</h1>
-				<Button
-					style={githubButton}
-					variant='outline-info'
-					href='https://github.com/abhikaboy'
-					target='_blank'>
-					Github
-				</Button>
+				<ScrollAnimation
+					animateIn='fadeInDown'
+					delay={0}
+					animateOnce
+					style={preText}>
+					<h3>Hi, I'm</h3>
+				</ScrollAnimation>
+				<ScrollAnimation
+					animateIn='fadeIn'
+					delay={500}
+					style={title}
+					animateOnce>
+					<h1 style={{ transform: "scale(1.6,1.6)" }}>Abhik Ray</h1>
+				</ScrollAnimation>
+				<ScrollAnimation
+					animateIn='rotateIn'
+					delay={800}
+					animateOnce
+					style={githubButton}>
+					<Button
+						style={{
+							transform: "translate(-50%,0)",
+						}}
+						variant='outline-info'
+						href='https://github.com/abhikaboy'
+						target='_blank'>
+						Github
+					</Button>
+				</ScrollAnimation>
 				<p></p>
 				<Image
 					style={headerStyle}
@@ -30,8 +51,7 @@ const githubButton = {
 	color: "white",
 	textAlign: "center",
 	marginLeft: "50%",
-	top: "49%",
-	transform: "translate(-50%,0)",
+	top: "52%",
 };
 const headerStyle = {
 	width: "100vw",
@@ -45,7 +65,7 @@ const headerStyle = {
 const title = {
 	textAlign: "center",
 	width: "100%",
-	top: "37%",
+	top: "42%",
 	color: "white",
 	fontSize: "5em",
 	//background:"linear-gradient(rgba(20,25,33,0.8), rgba(20,25,33,0.8))",
