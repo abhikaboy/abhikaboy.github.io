@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Intro from "./Components/Tabs/Intro";
 import Contact from "./Components/Tabs/Contact";
 import Footer from "./Components/Tabs/Footer";
+import MongoSection from "./Components/MongoSection";
 class App extends Component {
 	constructor(props) {
 		super();
@@ -16,6 +17,7 @@ class App extends Component {
 			<div style={{ background: "#171E27" }}>
 				<Header />
 				{/* <Navigation /> */}
+				<MongoSection />
 				<Intro />
 				<Projects />
 				<Contact />
