@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import { Center } from '@chakra-ui/layout';
+import { Center, Heading } from '@chakra-ui/layout';
 export class ProjectEntryAlt extends Component {
 	constructor(props) {
 		super(props);
@@ -28,15 +28,16 @@ export class ProjectEntryAlt extends Component {
 					>
 						<Row>
 							<Col sm>
-								<h2
+								<Heading
 									style={{
 										color: '#34febb',
 										textAlign: 'left',
 										// paddingTop: '20%',
 									}}
+									size='md'
 								>
 									{this.props.name}
-								</h2>
+								</Heading>
 								<p
 									style={{
 										color: 'white',

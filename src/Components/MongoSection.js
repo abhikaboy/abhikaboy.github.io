@@ -6,13 +6,13 @@ export default function MongoSection() {
 		<Box w='100vw'>
 			<Center paddingTop='30vh'>
 				<Stack>
-					<Heading color='#34febb' size='4xl' textAlign='center' pb='5vh'>
-						<b>Catch me at .live Community Day with MongoDB!</b>
+					<Heading color='#34febb' size='2xl' textAlign='center' pb='5vh'>
+						Catch me at .live Community Day with MongoDB!
 					</Heading>
 					<Center>
 						<iframe
-							width='560'
-							height='315'
+							width={window.innerWidth * 0.6}
+							height={window.innerHeight * 0.5}
 							src='https://www.youtube.com/embed/m975eFQFgss?start=18511'
 							title='You Tube video player'
 							frameborder='0'

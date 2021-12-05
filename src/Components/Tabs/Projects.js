@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Heading } from '@chakra-ui/layout';
 
 export class Projects extends Component {
 	render() {
@@ -36,7 +37,7 @@ export class Projects extends Component {
 										delay={0}
 										style={title}
 									>
-										<h2>Projects</h2>
+										<Heading>Projects</Heading>
 									</ScrollAnimation>
 								</Row>
 								<Row style={{ marginBottom: '10vh' }}>

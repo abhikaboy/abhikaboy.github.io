@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
+import React, { Component } from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import { Heading } from '@chakra-ui/layout';
 export class ProjectEntry extends Component {
 	constructor(props) {
 		super(props);
@@ -39,45 +40,50 @@ export class ProjectEntry extends Component {
 					<Container
 						fluid
 						style={{
-							border: "0px solid",
-							borderRadius: "20px",
-							borderColor: "white",
-							width: "100%",
-							padding: "3%",
-						}}>
+							border: '0px solid',
+							borderRadius: '20px',
+							borderColor: 'white',
+							width: '100%',
+							padding: '3%',
+						}}
+					>
 						<Row>
 							<Col sm>
 								<Image
 									src={this.props.img}
 									style={{
-										width: "75%",
-										margin: "5%",
-										zIndex: "90",
+										width: '75%',
+										margin: '5%',
+										zIndex: '90',
 									}}
 								/>
 							</Col>
 							<Col sm>
-								<h2
+								<Heading
+									size='md'
 									style={{
-										color: "#34febb",
-										textAlign: "right",
+										color: '#34febb',
+										textAlign: 'right',
 
-										paddingTop: "20%",
-									}}>
+										paddingTop: '20%',
+									}}
+								>
 									{this.props.name}
-								</h2>
+								</Heading>
 								<p
 									style={{
-										color: "white",
-										textAlign: "right",
-									}}>
+										color: 'white',
+										textAlign: 'right',
+									}}
+								>
 									{this.props.description}
 								</p>
 								<Button
 									style={githubButton}
 									variant='outline-info'
 									target='_blank'
-									href={this.props.ghub}>
+									href={this.props.ghub}
+								>
 									Github
 								</Button>
 							</Col>
@@ -92,11 +98,11 @@ export class ProjectEntry extends Component {
 }
 
 const githubButton = {
-	zIndex: "2",
-	position: "absolute",
-	color: "white",
-	textAlign: "right",
-	marginLeft: "100%",
-	transform: "translate(-150%,0)",
+	zIndex: '2',
+	position: 'absolute',
+	color: 'white',
+	textAlign: 'right',
+	marginLeft: '100%',
+	transform: 'translate(-150%,0)',
 };
 export default ProjectEntry;

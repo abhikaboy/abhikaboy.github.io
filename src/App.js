@@ -1,11 +1,12 @@
-import "./App.css";
-import React, { Component } from "react";
-import Projects from "./Components/Tabs/Projects";
-import Header from "./Components/Header";
-import Intro from "./Components/Tabs/Intro";
-import Contact from "./Components/Tabs/Contact";
-import Footer from "./Components/Tabs/Footer";
-import MongoSection from "./Components/MongoSection";
+import './App.css';
+import React, { Component } from 'react';
+import Projects from './Components/Tabs/Projects';
+import Header from './Components/Header';
+import Intro from './Components/Tabs/Intro';
+import Contact from './Components/Tabs/Contact';
+import Footer from './Components/Tabs/Footer';
+import MongoSection from './Components/MongoSection';
+import { ChakraProvider } from '@chakra-ui/react';
 class App extends Component {
 	constructor(props) {
 		super();
@@ -14,15 +15,17 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div style={{ background: "#171E27" }}>
+			<div style={{ background: '#171E27' }}>
 				<Header />
 				{/* <Navigation /> */}
-				<MongoSection />
-				<Intro />
-				<Projects />
-				<Contact />
-				<div style={{ paddingBottom: "20%" }}></div>
-				<Footer />
+				<ChakraProvider>
+					<MongoSection />
+					<Intro />
+					<Projects />
+					<Contact />
+					<div style={{ paddingBottom: '20%' }}></div>
+					<Footer />
+				</ChakraProvider>
 			</div>
 		);
 	}

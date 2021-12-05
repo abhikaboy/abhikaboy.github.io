@@ -3,31 +3,37 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ScrollAnimation from 'react-animate-on-scroll';
 import me from './images/melol.jpg';
-import { Box, Grid, GridItem, Center, Heading, Text } from '@chakra-ui/layout';
+import {
+	Box,
+	Grid,
+	GridItem,
+	Center,
+	Heading,
+	Text,
+	Stack,
+} from '@chakra-ui/layout';
 import { Container, Image } from '@chakra-ui/react';
+import { useMediaQuery } from '@chakra-ui/media-query';
 export class Intro extends Component {
 	render() {
 		return (
 			<div>
 				<ScrollAnimation animateIn='fadeInDown' delay={0} style={title}>
-					<h2>Intro.</h2>
+					<Heading>Intro.</Heading>
 				</ScrollAnimation>
-				<h2>_</h2>
 
 				<ScrollAnimation animateIn='fadeIn' delay={750}>
 					<Container>
 						<Container centerContent maxW='container.xl'>
 							<Center>
-								<Grid
-									gap={4}
-									templateRows='repeat(6, 1fr)'
-									templateColumns='repeat(5, 1fr)'
-									w='65vw'
-								>
-									<GridItem colSpan={2} rowSpan={6}>
-										<Image src={me} w='90%' borderRadius='20px' />
-									</GridItem>
-									<GridItem colSpan={3} rowSpan={6}>
+								<Stack direction={['column', 'row']} w='60vw' mt='2%'>
+									<Image
+										src={me}
+										w={['90vw', '22vw']}
+										w={['90vw', '22vw']}
+										borderRadius='20px'
+									/>
+									<div>
 										<Heading textAlign='center' color='#34febb'>
 											About Me
 										</Heading>
@@ -66,9 +72,8 @@ export class Intro extends Component {
 											into Minecraft and making youtube videos with my friend,
 											Baablu.
 										</Text>
-									</GridItem>
-									<GridItem colSpan={3} rowSpan={2} color='white'></GridItem>
-								</Grid>
+									</div>
+								</Stack>
 							</Center>
 						</Container>
 						<Row>
@@ -76,130 +81,112 @@ export class Intro extends Component {
 								<Heading color='#34febb'>Skills</Heading>
 							</Center>
 						</Row>
-						<Row>
-							<Center w='100vw' mt='10vh'>
-								<Grid
-									gap={20}
-									templateRows='repeat(2, 1fr)'
-									templateColumns='repeat(4, 1fr)'
-									w='65vw'
-								>
-									<GridItem colSpan={1} rowSpan={1} h='100%'>
-										<Heading
-											fontSize='20px'
-											color='white'
-											textAlign='center'
-											borderRadius='20px'
-											borderWidth='2px'
-											borderColor='white'
-											borderStyle='solid'
-										>
-											Design
-										</Heading>
-										<Center color='white'>
-											<ul>
-												<li>Adobe Photoshop</li>
-												<li>Adobe After Effects</li>
-												<li>Adobe Premiere Pro</li>
-												<li>Adobe LightRoom</li>
-												<li>Figma</li>
-											</ul>
-										</Center>
-									</GridItem>
-									<GridItem colSpan={1} rowSpan={1} h='100%'>
-										<Heading
-											fontSize='20px'
-											color='white'
-											textAlign='center'
-											borderRadius='20px'
-											borderWidth='2px'
-											borderColor='white'
-											borderStyle='solid'
-										>
-											Front End
-										</Heading>
-										<Center color='white'>
-											<ul>
-												<li>React</li>
-												<li>Redux</li>
-												<li>ChakraUI</li>
-												<li>React Native</li>
-												<li>Expo</li>
-												<li>Electron</li>
-												<li>Axios</li>
-											</ul>
-										</Center>
-									</GridItem>
-									<GridItem colSpan={1} rowSpan={1} h='100%'>
-										<Heading
-											fontSize='20px'
-											color='white'
-											textAlign='center'
-											borderRadius='20px'
-											borderWidth='2px'
-											borderColor='white'
-											borderStyle='solid'
-										>
-											Back End
-										</Heading>
-										<Center color='white'>
-											<ul>
-												<li>GraphQL</li>
-												<li>Apollo Client</li>
-												<li>Express</li>
-												<li>MongoDB</li>
-												<li>AWS</li>
-												<li>S3/EC2/Route 53</li>
-												<li>Flask</li>
-											</ul>
-										</Center>
-									</GridItem>
-									<GridItem colSpan={1} rowSpan={1} h='100%'>
-										<Heading
-											fontSize='20px'
-											color='white'
-											textAlign='center'
-											borderRadius='20px'
-											borderWidth='2px'
-											borderColor='white'
-											borderStyle='solid'
-										>
-											Technologies
-										</Heading>
-										<Center color='white'>
-											<ul>
-												<li>Git</li>
-												<li>JavaScript</li>
-												<li>Python</li>
-												<li>Java</li>
-												<li>HTML/CSS</li>
-											</ul>
-										</Center>
-									</GridItem>
-									<GridItem colSpan={1} rowSpan={1} color='white'></GridItem>
-									<GridItem colSpan={1} rowSpan={1} color='white'></GridItem>
-									<GridItem colSpan={1} rowSpan={1} color='white'></GridItem>
-								</Grid>
-							</Center>
-						</Row>
-
-						<Row>
-							<Container
-								style={{
-									margin: '0px',
-									padding: '0px',
-									color: 'white',
-									fontFamily: 'Raleway',
-								}}
-							>
-								<Row
-									style={{
-										marginBottom: '10%',
-									}}
-								></Row>
-							</Container>
-						</Row>
 					</Container>
+					<Center w='100vw' mt='10vh'>
+						<Stack direction={['column', 'row']} mt='1%' w={['100vw', '80vw']}>
+							<Container>
+								<Heading
+									fontSize='20px'
+									color='white'
+									textAlign='center'
+									borderRadius='20px'
+									borderWidth='2px'
+									borderColor='white'
+									borderStyle='solid'
+									padding='5%'
+									w={['90vw', '100%']}
+								>
+									Design
+								</Heading>
+								<Center color='white'>
+									<ul style={{ color: 'white' }}>
+										<li>Adobe Photoshop</li>
+										<li>Adobe After Effects</li>
+										<li>Adobe Premiere Pro</li>
+										<li>Adobe LightRoom</li>
+										<li>Figma</li>
+									</ul>
+								</Center>
+							</Container>
+							<Container>
+								<Heading
+									fontSize='20px'
+									color='white'
+									textAlign='center'
+									borderRadius='20px'
+									borderWidth='2px'
+									borderColor='white'
+									borderStyle='solid'
+									padding='5%'
+									w={['90vw', '100%']}
+								>
+									Front End
+								</Heading>
+								<Center color='white'>
+									<ul>
+										<li>React</li>
+										<li>Redux</li>
+										<li>ChakraUI</li>
+										<li>React Native</li>
+										<li>Expo</li>
+										<li>Electron</li>
+										<li>Axios</li>
+									</ul>
+								</Center>
+							</Container>
+							<Container>
+								<Heading
+									fontSize='20px'
+									color='white'
+									textAlign='center'
+									borderRadius='20px'
+									borderWidth='2px'
+									borderColor='white'
+									borderStyle='solid'
+									padding='5%'
+									w={['90vw', '100%']}
+								>
+									Back End
+								</Heading>
+								<Center color='white'>
+									<ul>
+										<li>GraphQL</li>
+										<li>Apollo Client</li>
+										<li>Express</li>
+										<li>MongoDB</li>
+										<li>AWS</li>
+										<li>S3/EC2/Route 53</li>
+										<li>Flask</li>
+									</ul>
+								</Center>
+							</Container>
+							<Container>
+								<Heading
+									fontSize='20px'
+									color='white'
+									textAlign='center'
+									borderRadius='20px'
+									borderWidth='2px'
+									borderColor='white'
+									borderStyle='solid'
+									padding='5%'
+									w={['90vw', '100%']}
+								>
+									Technologies
+								</Heading>
+								<Center color='white'>
+									<ul>
+										<li>Git</li>
+										<li>JavaScript</li>
+										<li>Python</li>
+										<li>Java</li>
+										<li>HTML/CSS</li>
+									</ul>
+								</Center>
+							</Container>
+						</Stack>
+					</Center>
+					<Container pt='30vh'></Container>
 				</ScrollAnimation>
 			</div>
 		);
