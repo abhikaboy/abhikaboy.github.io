@@ -7,6 +7,24 @@ import Contact from './Components/Tabs/Contact';
 import Footer from './Components/Tabs/Footer';
 import MongoSection from './Components/MongoSection';
 import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
+import Wharton from './Components/Wharton';
+function Page() {
+	return (
+		<div>
+			<Header />
+			<ChakraProvider>
+				<MongoSection />
+				<Intro />
+				<Projects />
+				<Contact />
+				<div style={{ paddingBottom: '20%' }}></div>
+				<Footer />
+			</ChakraProvider>
+		</div>
+	);
+}
 class App extends Component {
 	constructor(props) {
 		super();
@@ -15,17 +33,11 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div style={{ background: '#171E27' }}>
-				<Header />
-				{/* <Navigation /> */}
-				<ChakraProvider>
-					<MongoSection />
-					<Intro />
-					<Projects />
-					<Contact />
-					<div style={{ paddingBottom: '20%' }}></div>
-					<Footer />
-				</ChakraProvider>
+			<div style={{ background: '#0e1E27' }}>
+				<Routes>
+					<Route exact path='/' element={<Page />}></Route>
+					<Route path='/wharton' element={<Wharton />}></Route>
+				</Routes>
 			</div>
 		);
 	}
