@@ -20,7 +20,7 @@ export default function ElectionHeader() {
 	const [final, setFinal] = useState(false);
 	const [music, setMusic] = useState(false);
 	const [top, setTop] = useState([
-		'Sorry theres no cookies',
+		'Sorry theres no cookies (btw, turn your ringer on)',
 		'',
 		'',
 		'What grade are you in?',
@@ -291,7 +291,7 @@ export default function ElectionHeader() {
 										w='80vw'
 										onClick={() => {
 											setTop([
-												'Wow! Its almost senior year',
+												'ayooo can you believe its almost senior year?',
 												...top.splice(1, top.length),
 											]);
 											setPause(false);
