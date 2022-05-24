@@ -6,7 +6,7 @@ export default function MongoSection() {
 		<Box w='100vw'>
 			<Center paddingTop='30vh'>
 				<Stack>
-					<Heading color='#34febb' size='2xl' textAlign='center' pb='5vh'>
+					<Heading color='#34febb' size='xl' textAlign='center' pb='5vh'>
 						Catch me at .live Community Day with MongoDB!
 					</Heading>
 					<Center>

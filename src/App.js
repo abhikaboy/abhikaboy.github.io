@@ -10,6 +10,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, Link } from 'react-router-dom';
 import Wharton from './Components/Wharton';
+import Main from './Components/Election/Main';
 function Page() {
 	return (
 		<div>
@@ -37,6 +38,7 @@ class App extends Component {
 				<Routes>
 					<Route exact path='/' element={<Page />}></Route>
 					<Route path='/wharton' element={<Wharton />}></Route>
+					<Route path='/election' element={<Main />}></Route>
 				</Routes>
 			</div>
 		);
